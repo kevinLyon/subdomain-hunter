@@ -1,20 +1,9 @@
 import requests
+import sys
 
 #target = ' https://docs.hackerone.com/' # Teste de subdominio
 
 target = ' https://WWWWww.hackerone.com'
-
-#try:
-#    get_https = requests.get(target)
-#    if get_https.status_code == 200:
-#        print(f'\033[1;32m{get_https.url} --> status_code 200\033[m')
-    
-#except:
-#    print('Erro desconhecido!')
-
-
-
-#print(teste.text)
 
 
 def tratamento_de_url():
@@ -40,12 +29,19 @@ def link_links():
 
     link_full = []
     for sub in list:
-        full = sub + '.' + raw_url
+        full = str('https://' + sub + '.' + raw_url)
         link_full.append(full)
     return link_full
 
 
-teste = link_links()
 
-print(teste)
-
+#if __name__ == "__main__":
+#
+ #   urls = link_links()
+#
+#    for url in urls:
+#        try:
+#            gets = requests.get(f'{url}')
+#            print(f'\033[35m\n{gets.url}\033[m \033[32m--> Status code 200\033[m')
+#        except:
+#            pass
