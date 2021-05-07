@@ -61,7 +61,8 @@ if __name__ == "__main__":
     except:
         help()
         exit()
-
+     
+    # Checking wordlist
     try:
         wordlist = sys.argv[2]
         parser_wordlist(wordlist)
@@ -69,7 +70,7 @@ if __name__ == "__main__":
         help()
         exit()
     
-    # Checking wordlist
+    # Checking number of threads
     try:
         number_the_threads = sys.argv[3]
     except:
